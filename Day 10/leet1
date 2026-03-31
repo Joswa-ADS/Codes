@@ -1,0 +1,23 @@
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int n = nums.length;
+
+        int i = 0, j = 1;
+
+        while (i < n) {
+            if (j >= n) {
+                i++;
+                j = i + 1;
+                continue;
+            }
+
+            if (nums[i] + nums[j] == target) {
+                return new int[]{i, j};
+            }
+
+            j++;
+        }
+
+        return new int[]{-1, -1};
+    }
+}
