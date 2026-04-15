@@ -3,6 +3,9 @@ import java.util.*;
 public class Solution {
     public static int[] longestSubarray(int[] arr) {
         HashMap<Integer, Integer> map = new HashMap<>();
+        
+        map.put(0, -1); // 🔥 important fix
+        
         int sum = 0, maxLen = 0;
         int start = -1, end = -1;
 
@@ -10,6 +13,8 @@ public class Solution {
 
             if (arr[i] == 0) sum -= 1;
             else sum += 1;
+
+            // Case 1: from index 0
             if (sum == 1) {
                 if (i + 1 > maxLen) {
                     maxLen = i + 1;
@@ -18,7 +23,7 @@ public class Solution {
                 }
             }
 
-            
+            // Case 2: subarray in middle
             if (map.containsKey(sum - 1)) {
                 int prevIndex = map.get(sum - 1);
                 if (i - prevIndex > maxLen) {
@@ -28,11 +33,12 @@ public class Solution {
                 }
             }
 
-            
+            // store first occurrence
             if (!map.containsKey(sum)) {
                 map.put(sum, i);
             }
         }
+
         if (start == -1) return new int[0];
 
         int[] result = new int[maxLen];

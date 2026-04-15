@@ -43,7 +43,7 @@ class TV implements remote{
         System.out.println("change channel");
     }
 }
-public class Levels{
+public class levels{
     public static void main(String[] args){
         remote device=new TV();
         device.change();

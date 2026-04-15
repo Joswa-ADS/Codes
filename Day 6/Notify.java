@@ -39,9 +39,9 @@ public class Notify
 {
     public static void main(String[] args) {
         Notification notification;
-        notification= new EmailNotification("John Doe", "Hello, John! This is an email notification."); //left side reference variable of parent class and right side object of child class
-        notification.send(); // Output: Email notification sent
-        notification= new SMSNotification("Jane Smith", "Hello, Jane! This is an SMS notification.");
-        notification.send(); // Output: SMS notification sent
+        notification= new EmailNotification("Johnny Dep", "Hello, John! This is an email notification."); 
+        notification.send(); 
+        notification= new SMSNotification("Will Smith", "Hello, Jane! This is an SMS notification.");
+        notification.send();
     }
 }

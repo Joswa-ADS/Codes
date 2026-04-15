@@ -1,4 +1,4 @@
-public class FirstNonRep {
+public class nonrep {
     public static char firstchar(String str){
         char ch='n';
         for(int i=0;i<str.length();i++){

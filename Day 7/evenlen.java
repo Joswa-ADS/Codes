@@ -1,5 +1,5 @@
 import java.util.StringTokenizer;
-public class EvenLength {
+public class evenlen {
     //using stringtokenizer
     public static String evenlen(String str){
         StringTokenizer token=new StringTokenizer(str," ");

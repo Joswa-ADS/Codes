@@ -1,0 +1,20 @@
+
+
+import java.util.*;
+
+class Solution {
+    public int LEETCODE_560(int[] nums, int k) {
+        HashMap<Integer, Integer> m = new HashMap<>();
+        m.put(0, 1);
+        int sum = 0;
+        int c = 0;
+        for (int n : nums) {
+            sum += n;
+            if (m.containsKey(sum - k)) {
+                c += m.get(sum - k);
+            }
+            m.put(sum, m.getOrDefault(sum, 0) + 1);
+        }
+        return c;
+    }
+}

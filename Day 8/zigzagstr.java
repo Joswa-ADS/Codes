@@ -1,4 +1,4 @@
-public class zigzag
+public class zigzagstr
 {
     public static void main(String[] args)
     {

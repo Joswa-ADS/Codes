@@ -1,4 +1,4 @@
-public class secondmostfrequency
+public class secondmostfreq
 {
     public static void main(String[] args)
     {

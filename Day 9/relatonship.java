@@ -10,7 +10,7 @@ class Remote{
         System.out.println("Changing channel");
     }
 }
-public class Relationship{
+public class relatonship{
     public static void main(String[] args) {
         Remote tvRemote=new Remote();
         tvRemote.changeChannel();

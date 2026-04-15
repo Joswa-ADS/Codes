@@ -1,4 +1,4 @@
-public class Wave {
+public class wave {
     public static String waveForm(String str){
         StringBuilder sb=new StringBuilder();
         StringBuilder sb1=new StringBuilder();

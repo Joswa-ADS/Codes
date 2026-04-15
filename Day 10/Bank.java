@@ -28,15 +28,12 @@ class BankAccount{
           }
     }
 
-    
-    
-
     public double getBalance(){
         return balance;
     }
 }
 
-public class encap1 {
+public class Bank {
     public static void main(String[] args) {
         BankAccount b=new BankAccount();
         b.setBalance(1000);

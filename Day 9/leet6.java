@@ -1,17 +1,19 @@
+import java.util.*;
+
 class Solution {
     public String convert(String s, int numRows) {
-       if (numRows == 1 || numRows >= s.length()) {
+        if (numRows == 1 || numRows >= s.length()) {
             return s;
         }
 
         int idx = 0, d = 1;
-        List<Character>[] rows = new ArrayList[numRows];
+        StringBuilder[] rows = new StringBuilder[numRows];
         for (int i = 0; i < numRows; i++) {
-            rows[i] = new ArrayList<>();
+            rows[i] = new StringBuilder();
         }
 
         for (char c : s.toCharArray()) {
-            rows[idx].add(c);
+            rows[idx].append(c);
             if (idx == 0) {
                 d = 1;
             } else if (idx == numRows - 1) {
@@ -21,12 +23,10 @@ class Solution {
         }
 
         StringBuilder result = new StringBuilder();
-        for (List<Character> row : rows) {
-            for (char c : row) {
-                result.append(c);
-            }
+        for (StringBuilder row : rows) {
+            result.append(row);
         }
 
-        return result.toString();        
+        return result.toString();
     }
 }

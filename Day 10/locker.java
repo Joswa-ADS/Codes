@@ -11,52 +11,52 @@ class Locker{
         if(pin==pinCode){
             if(!isLocked){
                 storeItem=item;
-                System.out.println(x:"Stored successfully");
+                System.out.println("Stored successfully");
             }
             else{
-                System.out.println(x:"Locker is locked");
+                System.out.println("Locker is locked");
             }
         }
         else{
-            System.out.println(x:"Invalid pin");
+            System.out.println("Invalid pin");
         }
     }
     public void unlock(int pin){
         if(pin==pinCode){
             if(isLocked){
                 isLocked=false;
-                System.out.println(x:"Locker opened successfully");
+                System.out.println("Locker opened successfully");
             }
             else{
-                System.out.println(x:"Locker is already opened");
+                System.out.println("Locker is already opened");
             }
         }
         else{
-            System.out.println(x:"Invalid pin");
+            System.out.println("Invalid pin");
         }
     }
     public void lock(){
         isLocked=true;
-        System.out.println(x:"Locker is locked");
+        System.out.println("Locker is locked");
     }
     public void retrieveItem(int pin){
         if(pin==pinCode){
             if(!isLocked && storeItem!=null){
-                System.out.println(x:"Retrieved item:"+storeItem);
+                System.out.println("Retrieved item:"+storeItem);
             }
             else if(isLocked){
-                System.out.println(x:"Locker is locked");
+                System.out.println("Locker is locked");
             }
             else{
-                System.out.println(x:"Locker is empty");
+                System.out.println("Locker is empty");
             }
         }
         else{
-            System.out.println(x:"Invalid pin");
+            System.out.println("Invalid pin");
         }
     }
 }
-public class Task{
+public class locker{
     public static void main(String[] args) {
         Locker l=new Locker(1,1234);
         l.storeItem("Book",1234);

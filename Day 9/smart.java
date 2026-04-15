@@ -16,7 +16,7 @@ class Light extends SmartDevice{
         System.out.println("Light is turned off.");
     }
 }
-public class Smart
+public class smart
 {
     public static void main(String[] args){
         SmartDevice device = new Light();
